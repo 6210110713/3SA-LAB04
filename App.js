@@ -6,8 +6,8 @@ export default function App() {
  console.log("Hello from console")
  }
  return (
- <View style={styles.container}>
- <Text onPress={doIt}>Hello world</Text>
+<View style={styles.container}>
+ <Weather zipCode="90110"/>
  <StatusBar style="auto" />
  </View>
  );
