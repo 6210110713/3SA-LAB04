@@ -1,6 +1,5 @@
 import React from 'react'
 import {View , Text, Image, StyleSheet,Button} from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 export default function Forecast(props) {
     const image = 'http://openweathermap.org/img/wn/'+props.icon+'.png'
    return( 
