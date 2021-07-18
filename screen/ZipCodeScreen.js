@@ -5,13 +5,13 @@ import { useNavigation } from '@react-navigation/native'
 const availableZipItems = [
     { place: 'Hatyai', code: '90110', pic:require('../hatyai.jpg') },
     { place: 'Trang', code: '92000' , pic:require('../trang.jpg') },
-    { place: 'Chiangmai', code: '50000' ,pic:require('../cma.jpg')}, 
-    { place: 'Khonkaen', code: '40000' ,pic:require('../khonkaen.jpg') },
-    { place: 'Chonburi', code: '20000',pic:require('../chomburi.jpg' ) },
+    { place: 'Chiangmai', code: '50000' ,pic:require('../cha.jpg')}, 
+    { place: 'Khonkaen', code: '40000' ,pic:require('../kh.jpg') },
+    { place: 'Chonburi', code: '20000',pic:require('../chon.jpg' ) },
     { place: 'Samut Prakan',code: '10240',pic:require('../samut-prakan.jpg')},
     { place: 'Surat Thani',code: '81110',pic:require('../surat-thani.jpg') },
-    {place: 'Krabi', code: '81065',pic:require('../krabi.jpg') },
-    { place: 'Satun', code: '917780',pic:require('../satun.jpg')}
+    {place: 'Bangkok', code: '10110',pic:require('../bga.jpg') },
+    { place: 'Chaing Rai', code: '57000',pic:require('../chr.jpg')}
 ] 
 
     
@@ -37,16 +37,12 @@ const ZipItem = ({place, code,navigation,pic}) => (
         navigation={navigation}/>}/>    
     )
    } const styles = StyleSheet.create({
-        zipItem: {
-        flex:1,
-        },
-        zipPlace: {
-        flex:1,
-        },
-        zipCode: {
-            flex:1,
-        },
-
+    zipItem: {
+    flex:1,
+    flexDirection:'row',
+    justifyContent:'center'
+},
+        
        contan:{
         height:100,
         width:415,
