@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList,View, Text, StyleSheet , StatusBar } from 'react-native'
+import { FlatList,View, Text, StyleSheet , StatusBar ,ImageBackground} from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 const availableZipItems = [
@@ -8,6 +8,8 @@ const availableZipItems = [
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
+    { place: 'Samut Prakan',code: '10240'},
+    { place: 'Surat Thani',code: '81110'}
    ]
     const ZipItem = ({place, code, navigation}) => (
         <TouchableHighlight onPress={() => {
@@ -22,7 +24,7 @@ const availableZipItems = [
     
    export default function ZipCodeScreen(){
     const navigation = useNavigation()
-    return (
+    return ( 
     <FlatList
         data={availableZipItems}
         keyExtractor={ item => item.code}
