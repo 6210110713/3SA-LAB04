@@ -1,17 +1,32 @@
 import React from 'react'
-import {View , Text, Image} from 'react-native'
+import {View , Text, Image, StyleSheet,Button} from 'react-native'
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 export default function Forecast(props) {
     const image = 'http://openweathermap.org/img/wn/'+props.icon+'.png'
    return( 
     <View > 
-    <Text>{props.country}</Text>
-    <Text>{props.name}</Text>
-    <Text>{props.main}</Text>
-    <Text>{props.description}</Text>
-    <Image source = {{url: image}} style = {{width:50,height:50}} />
-    <Text>Temperater : {props.temp} °C</Text>
-    <Text>Temperater maximum : {props.tempmax} °C</Text>
-    <Text>Temperater minimum : {props.tempmin} °C</Text>
+    <Text style={styles.titleText}>Country: {props.country} </Text>
+    <Text style={styles.titleText}>City: {props.name}</Text>
+    <Text style={styles.titleText}>{props.main} {props.description}</Text>
+    <Image source = {{url: image}} style = {styles.saaa} />
+    <Text style={styles.titleText}>Temperater : {props.temp} °C</Text>
+    <Text style={styles.titleText}>Temperater maximum : {props.tempmax} °C</Text>
+    <Text style={styles.titleText}>Temperater minimum : {props.tempmin} °C</Text>
     </View>
    );
     }
+    const styles = StyleSheet.create({
+        titleText: { 
+          fontSize: 25, 
+          color:'white'   
+        },
+        saaa: {
+            width:100,
+            height:50,
+            flexDirection:'column',
+            justifyContent:'center',
+            alignItems:'center'
+        }
+      
+
+      });

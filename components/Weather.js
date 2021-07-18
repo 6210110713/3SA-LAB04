@@ -39,8 +39,7 @@ export default function Weather(props) {
     
     return (
         <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
-         <Text>Zip Code</Text>
-         <Text>{props.zipCode}</Text>
+         <Text style={styles.titleText}>Zip Code : {props.zipCode}</Text>
          <Forecast {...forecastInfo} />
         </ImageBackground>
         );
@@ -53,6 +52,11 @@ export default function Weather(props) {
             width: '100%',
             height: '100%'
         },
+        titleText: {
+            fontSize: 25,
+            fontWeight: "bold",    
+            color:'white'   
+          }
        });
        
    
