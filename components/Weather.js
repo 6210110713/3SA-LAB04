@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react';
 import { Text, ImageBackground ,StyleSheet} from 'react-native';
 import Forecast from './Forecast';
 
+
 export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: '-',
@@ -10,9 +11,9 @@ export default function Weather(props) {
         country: '-' ,
         name: '-',
         tempmax: 0 ,
-        tempmin: 0
+        tempmin: 0 ,
+        icon: "-"
         })
-
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
         if (props.zipCode) {
@@ -26,7 +27,8 @@ export default function Weather(props) {
         country: json.sys.country,
         name: json.name,
         tempmax: json.main.temp_max,
-        tempmin: json.main.temp_min
+        tempmin: json.main.temp_min,
+        icon: json.weather[0].icon
         });
         })
         .catch((error) => {

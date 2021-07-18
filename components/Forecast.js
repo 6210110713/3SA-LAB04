@@ -1,7 +1,7 @@
 import React from 'react'
 import {View , Text} from 'react-native'
 export default function Forecast(props) {
-    return (
+   return( 
     <View > 
     <Text>{props.country}</Text>
     <Text>{props.name}</Text>
@@ -13,5 +13,5 @@ export default function Forecast(props) {
     <Text>Temperater minimum</Text>
     <Text>{props.tempmin} °C</Text>
     </View>
-    );
-   }
+   );
+    }
